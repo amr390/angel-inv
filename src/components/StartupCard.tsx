@@ -41,10 +41,13 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </div>
         <Link href={`/user/${author?._id}`}>
           <Image
+            // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
             src={author?.image!}
+            // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
             alt={author?.name!}
             width={48}
             height={48}
+            style={{ width: "48px", height: "48px" }}
             className="rounded-full"
           />
         </Link>
