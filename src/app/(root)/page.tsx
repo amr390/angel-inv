@@ -8,6 +8,19 @@ export default async function Home({
   searchParams: Promise<{ query?: string }>;
 }) {
   const query = (await searchParams).query;
+  const posts = [
+    {
+      _createdAt: "Yesterday",
+      views: 55,
+      author: { _id: 1 },
+      _id: 1,
+      description: "this is a description",
+      image:
+        "https://unsplash.com/photos/person-holding-black-android-smartphone-close-up-photography-XvS-uKUoUao",
+      category: "Robots",
+      title: "We Robots",
+    },
+  ];
 
   return (
     <>
@@ -26,6 +39,7 @@ export default async function Home({
         <p className="text-30-semibold">
           {query ? `Search results for ${query}` : "All startups"}
         </p>
+        <ul className="mt-7 card_grid"></ul>
       </section>
     </>
   );
