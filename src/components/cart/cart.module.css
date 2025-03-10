@@ -1,9 +1,9 @@
-@reference path="../../app/globals.css";
+@reference "../../app/globals.css";
 
 .cart {
   @apply bg-gray-300 flex flex-col w-full h-full;
 }
 
 .cartHeader {
-  @apply flex bg-primary color-black text-30-extrabold py-4 px-6;
+  @apply flex justify-center items-center bg-primary text-30-extrabold py-4 px-6;
 }
