@@ -7,3 +7,27 @@
 .cartHeader {
   @apply flex justify-center items-center bg-primary text-30-extrabold py-4 px-6;
 }
+
+.cartBody {
+  @apply flex flex-row items-center space-x-4 border-b border-neutral-300 p-4 dark:border-neutral-700;
+}
+
+.cartBodyItemList {
+  @apply flex flex-col w-full space-y-4;
+}
+
+.cartBodyCheckoutButtons {
+  @apply flex flex-col space-y-4;
+}
+
+.cartBodyCheckoutButtons button {
+  @apply w-full;
+}
+
+.cartBodyCheckoutButton {
+  @apply bg-black text-white text-xl font-extrabold rounded-md py-4 px-6 cursor-pointer;
+}
+
+.cartBodyKeepBuyingButton {
+  @apply bg-neutral-100 text-neutral-700 py-4 px-6 rounded-md cursor-pointer;
+}

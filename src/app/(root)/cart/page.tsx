@@ -53,12 +53,33 @@ const CartBody = () => {
     },
   ];
   return (
-    <article className="cart--body">
-      <ul className="grow overflow-auto p-4">
-        {its.map((it, idx) => (
-          <CartItemView key={idx} {...it} />
-        ))}
-      </ul>
+    <article className={s.cartBody}>
+      <div className={s.cartBodyItemList}>
+        <ul className="grow overflow-auto p-4">
+          {its.map((it, idx) => (
+            <CartItemView key={idx} {...it} />
+          ))}
+        </ul>
+      </div>
+      <div className={s.cartBodyCheckoutButtons}>
+        {/* checkout buttons  */}
+        <div className="flex flex-col space-y-4 p-4">
+          <button
+            type="button"
+            className={s.cartBodyCheckoutButton}
+            aria-label="Proceed to checkout"
+          >
+            Proceed to checkout
+          </button>
+          <button
+            type="button"
+            className={s.cartBodyKeepBuyingButton}
+            aria-label="Continue shopping"
+          >
+            Continue shopping
+          </button>
+        </div>
+      </div>
     </article>
   );
 };
