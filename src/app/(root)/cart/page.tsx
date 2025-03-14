@@ -64,13 +64,21 @@ const CartBody = () => {
       <div className={s.cartBodyCheckoutButtons}>
         {/* checkout buttons  */}
         <div className="flex flex-col space-y-4 p-4">
-          <button
-            type="button"
-            className={s.cartBodyCheckoutButton}
-            aria-label="Proceed to checkout"
-          >
-            Proceed to checkout
-          </button>
+          <form action="/api/checkout_sessions" method="POST">
+            <section>
+              <button type="submit" role="link">
+                Checkout
+              </button>
+              <button
+                type="submit"
+                role="link"
+                className={s.cartBodyCheckoutButton}
+                aria-label="Proceed to checkout"
+              >
+                Proceed to checkout
+              </button>
+            </section>
+          </form>
           <button
             type="button"
             className={s.cartBodyKeepBuyingButton}
